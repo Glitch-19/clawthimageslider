@@ -1,0 +1,96 @@
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+@keyframes reveal-top-bottom {
+    0% {
+        opacity:0;
+      clip-path: inset(0 0 100% 0);
+    }
+
+    100% {
+        opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  #logo{
+    width: 100px; /* Adjust the size of the image as needed */
+    height: auto;
+    opacity: 0;
+    animation: reveal-top-bottom  0.5s 3s ease-out forwards;
+  }
+  #cla{
+    opacity: 0;
+    animation: flash 5s 0.50s forwards;
+    
+}
+
+@keyframes flash {
+
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#ths{
+    opacity: 0;
+
+    animation: flash 5s 0.50s forwards;
+}
+
+.slider img{
+  display: none;
+   border-radius: 20px;
+}
+
+img.displayslide{
+  display: block;
+}
+
+.b{
+  background-color: rgb(255, 0, 0);
+  height: 0.5em;
+  width: 0.2em;
+  border-radius: 100px;
+  border: none;
+}
+.b:hover{
+  background-color: rgb(74, 6, 0);
+  font-size: 1em;
+  cursor: pointer;
+}
+.b:after{
+  color: rgb(90, 3, 3);
+}
+
+#left{
+  left:33%;
+  position: absolute;
+  font-size: 3rem;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  top:50%;
+  background-color: rgba(0, 0, 0, 0.477);
+  color: azure;
+  cursor: pointer;
+  
+}
+#right{
+  right:33%;
+  position: absolute;
+  font-size: 3rem;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  top:50%;
+  background-color: rgba(0, 0, 0, 0.477);
+  color: azure;
+  cursor: pointer;
+}
